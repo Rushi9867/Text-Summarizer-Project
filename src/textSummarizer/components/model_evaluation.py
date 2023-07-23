@@ -73,7 +73,7 @@ class ModelEvaluation:
 
         rouge_dict = dict((rn, score[rn].mid.fmeasure ) for rn in rouge_names )
 
-        df = pd.DataFrame(rouge_dict, index = ['pegasus'] )
+        df = pd.DataFrame(rouge_dict, index = ['bart'] )
         df.to_csv(self.config.metric_file_name, index=False)
 
         
